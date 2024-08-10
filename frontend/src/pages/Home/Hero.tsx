@@ -1,10 +1,13 @@
-import React from 'react'
+
 
 const Hero = () => {
   return (
-    <div>
-      Hero
-      Hero
+    <div className='h-[20vh] md:h-[30vh] grid place-items-center relative bg-hero bg-center bg-cover rounded-3xl p-5'>
+      <div className='text-white text-center '>
+<h1 className='text-2xl md:text-3xl lg:text-4xl font-bold mb-5'>Tripster ile konaklama rezervasyonu yap</h1>
+
+<p className=''>Dünya çapında 1,279,528 oda seni bekliyor!</p>
+      </div>
     </div>
   )
 }
