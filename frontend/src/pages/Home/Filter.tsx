@@ -1,14 +1,26 @@
-import { cityOpt } from "../../constant"
+import { useSearchParams } from "react-router-dom"
+import { cityOpt, sortOpt } from "../../constant"
 
 
 const Filter = () => {
+
+const [params, setParams] = useSearchParams();
+
+
+const handleChange= (name:string, value:string)=> {
+  params.set(name, value);
+
+  setParams(params);
+}
+
+
   return (
     <form className='lg: mt-28 flex flex-col gap-4 lg:gap-10'>
       <div className='flex flex-col gap-2'>
         <label className='font-bold'>Nereye ?</label>
         <select className='border px-4 py-1 rounded-md' >
           <option value="">Seçiniz</option>
-          {cityOpt.map((opt,key)=><option></option>)}
+          {cityOpt.map((i,key)=><option value={i.value} key={key}>{i.label} </option>)}
         </select>
       </div>
      
@@ -25,6 +37,7 @@ const Filter = () => {
         <label className='font-bold'>Sıralama Ölçütü</label>
         <select className='border px-4 py-1 rounded-md' >
           <option value="">Seçiniz</option>
+          {sortOpt.map((i,key)=><option value={i.value} key={key}>{i.label} </option>)}
         </select>
       </div>
 <div className="flex justify-end">
