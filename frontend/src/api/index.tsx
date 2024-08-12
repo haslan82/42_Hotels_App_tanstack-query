@@ -1,4 +1,5 @@
 import axios from "axios";
+import { PlaceData } from "../types";
 
 
 
@@ -26,7 +27,12 @@ api.get(`/api/place/${id}`)
 
 
 // 1 konaklama yerini sil
-export const deletePlace =(id:string) => 
+export const deletePlace =(id:number) => 
 api.delete(`/api/place/${id}`);
+
+
+// 1 konaklama yeri oluştur
+export const createPlace =(body:PlaceData) => 
+api.post(`/api/places`, body);
 
 

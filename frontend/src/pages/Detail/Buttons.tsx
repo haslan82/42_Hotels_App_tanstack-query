@@ -3,19 +3,19 @@ import { FaRegTrashAlt } from "react-icons/fa"
 import { MdKeyboardArrowLeft } from "react-icons/md"
 import { Link, useNavigate } from "react-router-dom"
 import { deletePlace } from "../../api"
-import { toast } from "react-toastify"
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-
-const Buttons = ({id}: {id:string}) => {
+const Buttons = ({ id }: { id: number }) => {
   const navigate = useNavigate();
   
   const {isPending, mutate} = useMutation({
-    mutationFn:()=> deletePlace(id),
-    onSuccess:()=>{
-      toast.info("Hotel akıştan kaladırıldı");
+    mutationFn: () => deletePlace(id),
+    onSuccess: () => {
+      toast.info("Hotel akıştan kaldırıldı");
       navigate("/");
     },
-    onError:()=>{
+    onError: () => {
       toast.error("Üzgünüz bir sorun oluştu");
     },
   }); 
@@ -25,7 +25,7 @@ const Buttons = ({id}: {id:string}) => {
   return (
     
     <div className="flex justify-between mb-5">
-     <Link to="/" className="flex items-center gap-2 border py-1 px-3 rounded-md 
+     <Link to={"/"} className="flex items-center gap-2 border py-1 px-3 rounded-md 
      transition hover:bg-gray-200 hover:shadow">
      <MdKeyboardArrowLeft/>
      Geri
@@ -39,4 +39,4 @@ const Buttons = ({id}: {id:string}) => {
   )
 }
 
-export default Buttons
+export default Buttons;
