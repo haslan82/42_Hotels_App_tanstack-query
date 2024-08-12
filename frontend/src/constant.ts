@@ -1,19 +1,19 @@
 export const cityOpt= [
    {
     label:"İstanbul",
-    value:"istanbul",
+    value:"İstanbul",
    },
    {
     label:"İzmir",
-    value:"izmir",
+    value:"İzmir",
    },
    {
     label:"Ankara",
-    value:"ankara",
+    value:"Ankara",
    },
    {
     label:"Rize",
-    value:"rize",
+    value:"Rize",
    },
 ];
 
@@ -31,7 +31,7 @@ export const sortOpt = [
     value:"rating-asc",
    },
    {
-    label: "Yıldız: Düşükten Yükseğe",
+    label: "Yıldız: Yüksekten Düşüğe",
     value:"rating-desc",
    }
 ];

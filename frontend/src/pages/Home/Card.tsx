@@ -4,7 +4,7 @@ import Availability from "./Availability";
 import Rating from "./Rating";
 
 const Card = ({ place }: { place: Place }) => {
-  console.log(place);
+  //! console.log(place);
 
   return (
     <Link to={`/place/${place.id}`} className="border rounded-md p-4 cursor-pointer grid grid-cols-6 gap-3 min-h-[300px]">

@@ -1,50 +1,67 @@
-import { useSearchParams } from "react-router-dom"
-import { cityOpt, sortOpt } from "../../constant"
-
+import { useSearchParams } from "react-router-dom";
+import { cityOpt, sortOpt } from "../../constant";
 
 const Filter = () => {
+  const [params, setParams] = useSearchParams();
 
-const [params, setParams] = useSearchParams();
+  const handleChange = (name: string, value: string) => {
+    params.set(name, value);
 
-
-const handleChange= (name:string, value:string)=> {
-  params.set(name, value);
-
-  setParams(params);
-}
-
+    setParams(params);
+  };
 
   return (
-    <form className='lg: mt-28 flex flex-col gap-4 lg:gap-10'>
-      <div className='flex flex-col gap-2'>
-        <label className='font-bold'>Nereye ?</label>
-        <select className='border px-4 py-1 rounded-md' >
+    <form className="lg: mt-28 flex flex-col gap-4 lg:gap-10">
+      <div className="flex flex-col gap-2">
+        <label className="font-bold">Nereye ?</label>
+        <select
+          onChange={(e) => handleChange("location", e.target.value)}
+          className="border px-4 py-1 rounded-md"
+        >
           <option value="">Seçiniz</option>
-          {cityOpt.map((i,key)=><option value={i.value} key={key}>{i.label} </option>)}
+          {cityOpt.map((i, key) => (
+            <option value={i.value} key={key}>
+              {i.label}{" "}
+            </option>
+          ))}
         </select>
       </div>
-     
-     
-      <div className='flex flex-col gap-2'>
-        <label className='font-bold'>Konaklama yeri adına göre ara</label>
-        <input placeholder='ör: Seaside Villa' type='text' className='border px-4 py-1 rounded-md' >
-         
-        </input>
+
+      <div className="flex flex-col gap-2">
+        <label className="font-bold">Konaklama yeri adına göre ara</label>
+        <input
+          onChange={(e) => handleChange("title", e.target.value)}
+          placeholder="ör: Seaside Villa"
+          type="text"
+          className="border px-4 py-1 rounded-md"
+        ></input>
       </div>
 
-
-      <div className='flex flex-col gap-2'>
-        <label className='font-bold'>Sıralama Ölçütü</label>
-        <select className='border px-4 py-1 rounded-md' >
+      <div className="flex flex-col gap-2">
+        <label className="font-bold">Sıralama Ölçütü</label>
+        <select
+          onChange={(e) => handleChange("order", e.target.value)}
+          className="border px-4 py-1 rounded-md"
+        >
           <option value="">Seçiniz</option>
-          {sortOpt.map((i,key)=><option value={i.value} key={key}>{i.label} </option>)}
+          {sortOpt.map((i, key) => (
+            <option value={i.value} key={key}>
+              {i.label}{" "}
+            </option>
+          ))}
         </select>
       </div>
-<div className="flex justify-end">
-  <button type="reset" className="bg-blue-500 p-1 text-white rounded-md w-fit">Filtreleri Temizle</button>
-</div>
+      <div className="flex justify-end">
+        <button
+          onClick={() => setParams({})}
+          type="reset"
+          className="bg-blue-500 p-1 text-white rounded-md w-fit"
+        >
+          Filtreleri Temizle
+        </button>
+      </div>
     </form>
-  )
-}
+  );
+};
 
-export default Filter
+export default Filter;
