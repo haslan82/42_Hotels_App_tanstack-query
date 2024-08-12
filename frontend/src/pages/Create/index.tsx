@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 const Create = () => {
 const navigate = useNavigate();
-const {mutate} = useMutation({
+const {isPending,mutate} = useMutation({
   mutationFn:(body:PlaceData)=>createPlace(body),
   onSuccess:()=> {
     toast.success("Konaklama noktası oluşturuldu");
@@ -31,7 +31,10 @@ const body = {...values};
      // özellikleri diziye çevir
 body.amenities = (values.amenities as string).split(",") ;
     // api ye istek at
-console.log(body)
+//!console.log(body)
+
+mutate(body);
+
   };
   return (
     <Container>
@@ -50,7 +53,10 @@ console.log(body)
      className="border py-1 px-4 rounded-md shadow w-full"/>
      </div>
     ))}
-     <button className="border px-4 py-1 shadow rounded-md bg-blue-500" type="submit">Gönder</button>
+     <button disabled={isPending} className="border px-6 py-2 my-5 
+     font-bold text-white shadow rounded-md bg-blue-500 transition
+      hover:bg-blue-600 disabled:bg-blue-300" 
+     type="submit">Gönder</button>
      </Form>
      </Formik>
     </Container>
