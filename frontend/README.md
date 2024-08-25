@@ -3,7 +3,7 @@
 
 ### Project gif
 
-![](./public/gifff1.gif) yeni gif
+![](./public/) yeni gif
 
 
 
