@@ -3,7 +3,7 @@
 
 ### Project gif
 
-![](./public/) yeni gifsssssss
+![](./public/) ufak bir dizin değişikliği yaptım
 
 
 
