@@ -15,9 +15,6 @@ Oteller Uygulaması, kullanıcıların otelleri aramasına, filtrelemesine ve de
 - React Icons
 - Tailwindcss
 
-### Canlı Proje
-
-
 
 ### Project GIF
 
