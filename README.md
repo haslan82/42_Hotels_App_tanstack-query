@@ -15,12 +15,15 @@ Oteller Uygulaması, kullanıcıların otelleri aramasına, filtrelemesine ve de
 - React Icons
 - Tailwindcss
 
+### Canlı Proje
 
-## Project GIF
+
+
+### Project GIF
 
 
 ![](./frontend//public/Aug-25-2024%2022-22-59.gif)
 
 
 
-##  Designed by <a href="https://www.linkedin.com/in/h%C3%BCseyin-aslan-128519203/" target="_blank">Hüseyin ASLAN</a> 
+###  Designed by <a href="https://www.linkedin.com/in/h%C3%BCseyin-aslan-128519203/" target="_blank">Hüseyin ASLAN</a> 
