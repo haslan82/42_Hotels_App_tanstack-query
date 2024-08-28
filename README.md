@@ -9,8 +9,8 @@ Oteller Uygulaması, kullanıcıların otelleri aramasına, filtrelemesine ve de
 - React Router DOM
 - Axios
 - Formik
-- React Query
-- React Query Devtools
+- React/Query
+- React/Query Devtools
 - React Toastify
 - React Icons
 - Tailwindcss
@@ -23,4 +23,9 @@ Oteller Uygulaması, kullanıcıların otelleri aramasına, filtrelemesine ve de
 
 
 
+<<<<<<< HEAD
 ###  Designed by <a href="https://www.linkedin.com/in/h%C3%BCseyin-aslan-128519203/" target="_blank">Hüseyin ASLAN</a> 
+=======
+##  Designed by 
+<a href="https://www.linkedin.com/in/h%C3%BCseyin-aslan-128519203/" target="_blank">Hüseyin ASLAN</a> 
+>>>>>>> 6f87360 (düzenledim)
